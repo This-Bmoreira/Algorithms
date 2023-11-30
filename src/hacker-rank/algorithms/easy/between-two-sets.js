@@ -1,16 +1,81 @@
 /*
-Problema de programação: O documento apresenta um problema de programação
-que envolve encontrar números inteiros que satisfaçam certos critérios
-relativos a dois conjuntos de números. O problema é definir uma
-função chamada getTotalX que retorne o número de inteiros que estão entre os conjuntos.
-Condições do problema: As condições do problema são as seguintes:
-Os elementos do primeiro conjunto são todos fatores do inteiro sendo considerado
-O inteiro sendo considerado é um fator de todos os elementos do segundo conjunto
-Exemplo do problema: O documento fornece um exemplo do problema com
-dois conjuntos de números: [2, 4] e [16, 32, 96]. O documento explica
-que os números entre os conjuntos são 4, 8 e 16, pois eles satisfazem
-as condições do problema. O documento também mostra que a função getTotalX
-deve retornar 3, que é o número de inteiros entre os conjuntos.
+Problema: Números Entre Conjuntos
+
+Haverá dois conjuntos de inteiros.
+Determine todos os inteiros que satisfazem as seguintes duas condições:
+
+Os elementos do primeiro conjunto são todos fatores do inteiro considerado.
+O inteiro considerado é um fator de todos os elementos do segundo conjunto.
+
+Esses números são referidos como estando entre os dois conjuntos.
+Determine quantos números assim existem.
+
+Exemplo:
+a = [2, 6]
+b = [24, 36]
+
+Há dois números entre os conjuntos: 6 e 12.
+Para o primeiro valor:
+
+6 % 2 = 0,
+6 % 6 = 0,
+24 % 6 = 0,
+36 % 6 = 0.
+
+Para o segundo valor:
+
+12 % 2 = 0,
+12 % 6 = 0,
+24 % 12 = 0,
+36 % 12 = 0.
+
+Retorne 2.
+
+Descrição da Função:
+
+python
+
+def getTotalX(a, b):
+# Implementação da lógica para contar os números entre os conjuntos
+pass
+
+getTotalX tem o(s) seguinte(s) parâmetro(s):
+
+int a[n]: um conjunto de inteiros
+int b[m]: um conjunto de inteiros
+
+Retorna:
+
+int: o número de inteiros que estão entre os conjuntos
+
+Formato de Entrada:
+
+A primeira linha contém dois inteiros separados por espaço, n e m,
+o número de elementos nos conjuntos a e b.
+A segunda linha contém n inteiros distintos separados por espaço, a[i] onde 0 <= i < n.
+A terceira linha contém m inteiros distintos separados por espaço, b[j] onde 0 <= j < m.
+
+Restrições:
+
+1 <= n, m <= 10
+1 <= a[i] <= 100
+1 <= b[j] <= 100
+
+Exemplo de Entrada:
+2 3
+2 4
+16 32 96
+
+Exemplo de Saída:
+3
+Explicação:
+
+2 e 4 dividem uniformemente em 4, 8, 12 e 16.
+4, 8 e 16 dividem uniformemente em 16, 32, 96.
+4, 8 e 16 são os únicos três números para os quais cada elemento de a é
+um fator e cada um é um fator de todos os elementos de b.
+
+https://www.hackerrank.com/challenges/between-two-sets/problem?isFullScreen=true
 */
 
 /*

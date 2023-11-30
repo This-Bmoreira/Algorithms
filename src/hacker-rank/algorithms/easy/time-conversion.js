@@ -1,15 +1,34 @@
 /*
-Conversão de tempo: A página explica como converter um tempo em formato de 12 horas (AM/PM)
-para um formato de 24 horas (militar).
-A página fornece uma função chamada timeConversion que recebe uma string
-que representa um tempo em formato de 12 horas e retorna uma nova string que representa
-o mesmo tempo em formato de 24 horas.
-Regras de conversão: A página também fornece algumas regras para fazer
-a conversão de tempo, tais como:
-12:00:00AM em um relógio de 12 horas é 00:00:00 em um relógio de 24 horas.
-12:00:00PM em um relógio de 12 horas é 12:00:00 em um relógio de 24 horas.
-Para qualquer outro tempo, basta adicionar 12 horas ao tempo em formato de 12
-horas se for PM, ou manter o mesmo tempo se for AM.
+Dado um horário no formato AM/PM de 12 horas, converta-o para o formato militar de 24 horas.
+Nota: - 12:00:00 AM em um relógio de 12 horas é 00:00:00 em um relógio de 24 horas.
+12:00:00 PM em um relógio de 12 horas é 12:00:00 em um relógio de 24 horas.
+
+Exemplo:
+
+s = '12:01:00PM'
+return '12:01:00'
+s = '12:01:00PM'
+return '00:01:00'
+
+Descrição da Função:
+Deve retornar uma nova string representando o horário de entrada no formato de 24 horas.
+
+timeConversion tem o(s) seguinte(s) parâmetro(s):
+
+string s: um horário no formato de 12 hora
+
+Retorna
+string: o horário no formato de 24 hora
+
+Restrições:
+Todos os horários de entrada são válidos
+
+Exemplo de Entrada 0:
+07:05:45 PM
+Exemplo de Saída 0:
+19:05:45
+
+https://www.hackerrank.com/challenges/time-conversion/problem
 */
 
 function timeConversion(s) {

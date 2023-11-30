@@ -1,11 +1,57 @@
 /* eslint-disable no-param-reassign */
 /*
-Problema: Dado um array de inteiros e um inteiro positivo
-, determinar o número de pares onde e + é divisível por .
-Solução: Completar a função divisibleSumPairs no editor abaixo.
-Entrada: A primeira linha contém dois inteiros separados por espaço,
-e . A segunda linha contém inteiros separados por espaço, cada um um valor de .
-Saída: Contar o número de pares em um array que têm somas que são divisíveis por um dado número.
+Dado um array de inteiros e um inteiro positivo k,
+determine o número de  pares (i, j) onde i < j e
+ar[i] + ar[j] é divisível por k.
+
+Exemplo:
+
+ar = [1, 2, 3, 4, 5, 6]
+k = 5
+
+Três pares atendem aos critérios: [1, 4], [2, 3] e [4, 6].
+
+Descrição da Função:
+
+Complete a função divisibleSumPairs no editor abaixo.
+
+divisibleSumPairs tem o(s) seguinte(s) parâmetro(s):
+
+int n: o comprimento do array
+int ar[n]: um array de inteiros
+int k: o divisor inteiro
+
+Retorno:
+int: o número de pares
+
+Formato de Entrada:
+A primeira linha contém dois inteiros separados por espaço, n  e  k.
+A segunda linha contém n inteiros separados por espaço, cada um representando um valor de arr[i] .
+
+Restrições:
+
+2 <= n <= 100
+1 <= k <= 100
+1 <= ar[i] <= 100
+
+Exemplo de Entrada:
+
+6 3 (inteiros separados por espaço, n  e  k.)
+1 3 2 6 1 2 (cada um representando um valor de arr[i])
+
+Exemplo de Saída:
+5
+
+Explicação:
+
+Aqui estão os pares válidos quando :
+
+(1, 2) -> ar[0] + ar[2] = 1 + 2 = 3
+(2, 1) -> ar[0] + ar[5] = 1 + 2 = 3
+(3, 6) -> ar[1] + ar[3] = 3 + 6 = 3
+(6, 3) -> ar[2] + ar[4] = 2 + 1 = 3
+(1, 2) -> ar[4] + ar[5] = 1 + 2 = 3
+
 https://www.hackerrank.com/challenges/divisible-sum-pairs/problem?isFullScreen=true
 */
 
@@ -18,19 +64,6 @@ https://www.hackerrank.com/challenges/divisible-sum-pairs/problem?isFullScreen=t
  *  2. INTEGER k
  *  3. INTEGER_ARRAY ar
  */
-
-// function divisibleSumPairs(n, k, ar) {
-//   return ar.reduce((count, value, index, array) => {
-//     for (let i = index + 1; i < n; i += 1) {
-//       const sum = value + array[i];
-//       console.log(sum)
-//       if (sum % k === 0) {
-//         count += 1;
-//       }
-//     }
-//     return count;
-//   }, 0);
-// }
 
 function divisibleSumPairs(n, k, ar) {
   return ar.reduce((count, value, index, array) => {

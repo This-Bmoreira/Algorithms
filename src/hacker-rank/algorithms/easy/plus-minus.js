@@ -1,16 +1,52 @@
 /*
-Esta página é um desafio de programação
-que pede para escrever uma função que calcule as proporções de valores positivos,
-negativos e zero em um array de inteiros. O resumo da página é:
-Objetivo: Escrever uma função chamada plusMinus que receba um array de inteiros
-como parâmetro e imprima na tela as frações de valores positivos, negativos e zero no array,
-com seis casas decimais após a vírgula. Entrada: A primeira linha contém um inteiro n,
-que representa o tamanho do array. A segunda linha contém n inteiros separados por espaços,
-que são os elementos do array.
-Saída: Imprimir três linhas, cada uma com um valor decimal representando
-a proporção de valores positivos, negativos e zero no array,
-respectivamente. Não retornar nenhum valor.
-Exemplo: Se a entrada for 6 [-4, 3, -9, 0, 4, 1], a saída deve ser 0.500000 0.333333 0.166667.
+Desafio: Proporções de Números
+
+Dado um array de inteiros, precisamos calcular as proporções de elementos positivos,
+negativos e zeros. As proporções devem ser impressas com 6 casas decimais.
+
+Por exemplo, se o array for [1, 1, 0, -1, -1], há 5 elementos:
+dois positivos, dois negativos e um zero.
+As proporções são 2/5 = 0.400000, 2/5 = 0.400000 e 1/5 = 0.200000, respectivamente.
+
+A função plusMinus deve ser completada.
+Ela recebe um array de inteiros como parâmetro e
+imprime as proporções de valores positivos, negativos e zeros no array.
+
+Formato de Entrada:
+
+A primeira linha contém um inteiro, n, o tamanho do array.
+A segunda linha contém n inteiros separados por espaço que descrevem o array.
+
+Restrições:
+
+0 < n <= 100
+-100 < arr[i] <= 100
+
+Saída:
+Imprima as seguintes 3 linhas, cada uma com 6 casas decimais:
+
+Proporção de valores positivos.
+Proporção de valores negativos.
+Proporção de zeros.
+
+Exemplo:
+
+Entrada:
+6 (tamanho do array)
+-4 3 -9 0 4 1 (inteiros separados por espaço que descrevem o array)
+
+Saída:
+0.500000
+0.333333
+0.166667
+
+Explicação:
+Existem 3 números positivos, 2 números negativos e 1 zero no array. As proporções são:
+
+Positivos: 0.500000
+Negativos: 0.333333
+Zeros: 0.166667
+
 https://www.hackerrank.com/challenges/plus-minus/problem?isFullScreen=true
 */
 
